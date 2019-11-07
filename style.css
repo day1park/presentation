@@ -65,6 +65,9 @@ body {
 }
 
 @keyframes fade-in {
+  70% {
+    opacity: 0;
+  }
   100% {
     opacity: 1;
   }
@@ -81,30 +84,34 @@ body {
   color: #333;
 }
 
-#page-1 h1 {
+h1 {
   position: relative;
   animation: animate-h1 1.8s forwards ease-in-out;
 }
 
 @keyframes animate-h1 {
   0% {
-    top: -600px;
+    opacity: 0;
+    top: -420px;
   }
+
   100% {
     top: 0;
   }
 }
 
-#page-1 p {
+p {
   position: relative;
   animation: animate-p 1.8s forwards ease-out;
 }
 
 @keyframes animate-p {
   0% {
+    opacity: 0;
     left: -1800px;
   }
   100% {
+    opacity: 1;
     left: 0;
   }
 }
