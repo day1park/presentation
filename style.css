@@ -51,6 +51,7 @@ body {
 
 .btn {
   display: inline-block;
+  opacity: 0;
   padding: 1rem 2rem;
   background: #f4f4f4;
   color: #333;
@@ -60,6 +61,13 @@ body {
   font-size: 1.1rem;
   transition: all 0.3s ease-in;
   border-radius: 5px;
+  animation: fade-in 2s forwards ease-in-out;
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
 }
 
 .btn:hover,
@@ -71,4 +79,32 @@ body {
 .btn-dark:hover {
   background: #f4f4f4;
   color: #333;
+}
+
+#page-1 h1 {
+  position: relative;
+  animation: animate-h1 1.8s forwards ease-in-out;
+}
+
+@keyframes animate-h1 {
+  0% {
+    top: -600px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+#page-1 p {
+  position: relative;
+  animation: animate-p 1.8s forwards ease-out;
+}
+
+@keyframes animate-p {
+  0% {
+    left: -1800px;
+  }
+  100% {
+    left: 0;
+  }
 }
