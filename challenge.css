@@ -3,7 +3,7 @@
   --page-2-color: tan;
   --page-3-color: teal;
   --page-4-color: slateblue;
-  --animate-speed: 1.4s;
+  --animate-speed: 1s;
 }
 
 body {
@@ -51,6 +51,7 @@ body {
 
 .btn {
   display: inline-block;
+  opacity: 0;
   padding: 1rem 2rem;
   background: #f4f4f4;
   color: #333;
@@ -60,16 +61,11 @@ body {
   font-size: 1.1rem;
   transition: all 0.3s ease-in;
   border-radius: 5px;
+  animation: fade-in 2s forwards ease-in-out 2.1s;
 }
 
-#page-1 .btn {
-  /* fade in animate */
-  opacity: 0;
-  animation: button var(--animate-speed) forwards ease-in 2.2s;
-}
-
-@keyframes button {
-  to {
+@keyframes fade-in {
+  100% {
     opacity: 1;
   }
 }
@@ -85,25 +81,32 @@ body {
   color: #333;
 }
 
-/* page animation */
-#page-1 h1 {
-  transform: translateY(-1200px);
-  animation: heading var(--animate-speed) forwards ease-in;
+h1 {
+  position: relative;
+  animation: animate-h1 1.8s forwards ease-in-out;
 }
 
-@keyframes heading {
-  to {
-    transform: translateY(0);
+@keyframes animate-h1 {
+  0% {
+    opacity: 0;
+    top: -420px;
+  }
+
+  100% {
+    top: 0;
   }
 }
 
-#page-1 p {
-  transform: translateX(-1800px);
-  animation: paragraph var(--animate-speed) forwards ease-in 0.9s;
+p {
+  position: relative;
+  opacity: 0;
+  left: -1800px;
+  animation: animate-p 1.8s forwards ease-out 0.9s;
 }
 
-@keyframes paragraph {
-  to {
-    transform: translateX(0);
+@keyframes animate-p {
+  100% {
+    opacity: 1;
+    left: 0;
   }
 }
