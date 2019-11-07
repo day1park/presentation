@@ -28,3 +28,13 @@ body {
 #page-4 {
   background: var(--page-4-color);
 }
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 4rem;
+}
