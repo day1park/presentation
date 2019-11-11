@@ -1,5 +1,5 @@
 :root {
-  --primary-color: rgba(13, 110, 139, 0.65);
+  --primary-color: rgba(13, 110, 139, 0.75);
   --secondary-color: rgba(59, 231, 36, 0.9);
   --overlay-color: rgba(24, 39, 51, 0.89);
   --menu-speed: 0.75s;
@@ -44,9 +44,10 @@ body {
 #showcase .showcase-container {
   display: flex;
   flex-direction: column;
-  align-content: center;
+  align-items: center;
   justify-content: center;
   text-align: center;
+  height: 100%;
 }
 
 #showcase h1 {
@@ -64,10 +65,10 @@ body {
   color: #fff;
   padding: 0.75rem 1.5rem;
   margin-top: 1rem;
-  transition: all 1s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
   text-decoration: none;
 }
 
 .btn:hover {
-  opacity: 0.7;
+  opacity: 0.6;
 }
