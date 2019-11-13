@@ -1,6 +1,6 @@
 :root {
   --primary-color: #483bfa;
-  --hover-color: #5046d1;
+  --secondary-color: #5046d1;
 }
 
 * {
@@ -85,7 +85,7 @@ body {
 }
 
 #navbar ul li:hover ul li:hover span {
-  background: var(--hover-color);
+  background: var(--secondary-color);
 }
 
 #showcase {
@@ -97,4 +97,9 @@ body {
   text-align: center;
   padding: 0 2rem;
   background: var(--primary-color);
+}
+
+#showcase h1 {
+  color: #fff;
+  font-size: 4rem;
 }
