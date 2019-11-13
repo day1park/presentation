@@ -55,4 +55,15 @@ h1 {
   width: 400px;
   padding: 1rem;
   background: var(--secondary-color);
+  transition: all 0.5s ease-in-out;
+}
+
+/* right side */
+#timeline ul li:nth-child(odd) div {
+  left: 40px;
+}
+
+/* left side */
+#timeline ul li:nth-child(even) div {
+  left: -434px;
 }
